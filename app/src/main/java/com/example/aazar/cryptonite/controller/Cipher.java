@@ -79,7 +79,7 @@ public class Cipher {
             String decryptedText = "";
 
             int a_inv = 0;
-            int flag = 0;
+            int flag;
 
             // for inverse
             for (int i = 1; i < 26; i++) {
@@ -96,6 +96,7 @@ public class Cipher {
         }
     }
 
+    // needs to be implemented
     public static class HillCipher {
     } // hill cipher end
 } // cipher class end
