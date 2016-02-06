@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGreyColor"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="com.example.aazar.cryptonite.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_cipher_algo_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:entries="@array/cipher_algos">
+
+        </Spinner>
+
+        <EditText
+            android:id="@+id/editTextMsg"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edit_text_rounded_corners"
+            android:hint="@string/edit_text_msg_hint"
+            android:inputType="text"
+            android:textColorHint="@color/editTextHintColor"
+            android:textSize="20sp" />
+
+        <EditText
+        android:id="@+id/editTextShiftKey"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+        android:hint="@string/edit_text_shift_key_hint"
+        android:inputType="number"
+        android:textColorHint="@color/editTextHintColor"
+        android:background="@drawable/edit_text_rounded_corners"/>
+
+        <EditText
+        android:id="@+id/editTextVigenereKey"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+        android:hint="@string/edit_text_vigenere_key_hint"
+        android:inputType="text"
+        android:textColorHint="@color/editTextHintColor"
+        android:background="@drawable/edit_text_rounded_corners"/>
+
+        <RelativeLayout
+        android:id="@+id/relativeLayoutAffineKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+        android:id="@+id/editTextAffineKeyA"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+        android:hint="@string/edit_text_affine_key_a"
+        android:inputType="number"
+        android:textColorHint="@color/editTextHintColor"
+        android:background="@drawable/edit_text_rounded_corners"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+        <EditText
+        android:id="@+id/editTextAffineKeyB"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+        android:hint="@string/edit_text_affine_key_b"
+        android:inputType="number"
+        android:textColorHint="@color/editTextHintColor"
+        android:background="@drawable/edit_text_rounded_corners"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutHillKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextHillKeyA"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/edit_text_rounded_corners"
+                android:hint="@string/edit_text_affine_key_a"
+                android:inputType="number"
+                android:textColorHint="@color/editTextHintColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextHillKeyB"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/edit_text_rounded_corners"
+                android:hint="@string/edit_text_affine_key_b"
+                android:inputType="number"
+                android:textColorHint="@color/editTextHintColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextHillKeyC"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/edit_text_rounded_corners"
+                android:hint="@string/edit_text_affine_key_a"
+                android:inputType="number"
+                android:textColorHint="@color/editTextHintColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextHillKeyD"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/edit_text_rounded_corners"
+                android:hint="@string/edit_text_affine_key_b"
+                android:inputType="number"
+                android:textColorHint="@color/editTextHintColor"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/switchTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_text_decrypt"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switchCryptoMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/myTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/flat_button"
+            android:text="GET CRACKING"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

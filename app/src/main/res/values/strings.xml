@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Cryptonite</string>
+
+    <string name="edit_text_msg_hint">Enter Cipher Text (No spaces)</string>
+
+    <string name="edit_text_shift_key_hint">Enter Key (within 1 and 25)</string>
+
+    <string name="edit_text_vigenere_key_hint">Enter Keyword (No spaces)</string>
+
+    <string name="edit_text_affine_key_a">Enter key a</string>
+    <string name="edit_text_affine_key_b">Enter key b</string>
+
+    <string name="edit_text_hill_key_a">Enter matrix a</string>
+    <string name="edit_text_hill_key_b">Enter matrix b</string>
+    <string name="edit_text_hill_key_c">Enter matrix c</string>
+    <string name="edit_text_hill_key_d">Enter matrix d</string>
+
+
+    <string name="button_text">GET CRACKING</string>
+    <string name="general_hint">Switch On: Encrypt, Switch Off: Decrypt</string>
+    <string name="switch_text_encrypt">Encrypt</string>
+    <string name="switch_text_decrypt">Decrypt</string>
+
+    <string-array name="cipher_algos">
+        <item>Select Cipher Algorithm</item>
+        <item>Shift Cipher</item>
+        <item>Vigenere Cipher</item>
+        <item>Affine Cipher</item>
+        <item>Hill Cipher</item>
+        <item>Substitution Cipher</item>
+        <item>Transposition Cipher</item>
+    </string-array>
+
+</resources>
